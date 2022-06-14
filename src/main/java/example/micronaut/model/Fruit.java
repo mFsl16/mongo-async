@@ -1,6 +1,7 @@
 package example.micronaut.model;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import org.bson.codecs.pojo.annotations.BsonCreator;
 import org.bson.codecs.pojo.annotations.BsonProperty;
@@ -12,15 +13,17 @@ import io.micronaut.core.annotation.Nullable;
 
 @Introspected
 public class Fruit {
-    
-    @NonNull
+
+
+    @NotNull
     @NotBlank
     @BsonProperty("name")
-    private final String name;
-
+    private String name;
     @Nullable
     @BsonProperty("description")
-    private final String description;
+    private String description;
+
+    public Fruit(){}
 
     public Fruit(@NonNull String name) {
         this(name, null);

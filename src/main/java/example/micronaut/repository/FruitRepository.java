@@ -1,5 +1,6 @@
 package example.micronaut.repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -14,5 +15,7 @@ public interface FruitRepository {
     List<Fruit> listFruit();
 
     Fruit save(@NonNull @NotNull @Valid Fruit fruit);
+
+    ArrayList<Fruit> findByName(@NonNull @NotNull String name);
     
 }

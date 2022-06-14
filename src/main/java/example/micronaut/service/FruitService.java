@@ -25,4 +25,8 @@ public class FruitService {
         return fruitRepository.save(fruit);
     }
 
+    public List<Fruit> getFruitByName(String name) {
+        return fruitRepository.findByName(name);
+    }
+
 }
