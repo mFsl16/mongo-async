@@ -1,0 +1,17 @@
+micronaut:
+  application:
+    name: mongoAsycn
+netty:
+  default:
+    allocator:
+      max-order: 3
+
+mongodb:
+  uri: mongodb://adminuser:password123@192.168.49.2:32000/?authSource=admin&readPreference=primary&ssl=false
+  
+    
+app:
+  mongo:
+    name: test
+    collection: fruit
+    uri: mongodb://adminuser:password123@192.168.49.2:32000/?authSource=admin&readPreference=primary&ssl=false
